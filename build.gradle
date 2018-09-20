@@ -1,0 +1,72 @@
+
+buildscript {
+    repositories {
+        jcenter()
+        maven {
+            name "forge"
+            url "http://files.minecraftforge.net/maven/"
+        }
+    }
+    dependencies {
+        classpath "net.minecraftforge.gradle:ForgeGradle:2.2-SNAPSHOT"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlin_version}"
+    }
+}
+
+apply plugin: "net.minecraftforge.gradle.forge"
+apply plugin: "kotlin"
+
+version = mod_version
+
+//group 'org.ancienttimes'
+//version '1.0-SNAPSHOT'
+
+sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
+
+minecraft {
+    version = mc_version + "-" + forge_version
+    runDir = "run"
+
+    mappings = mcp_mappings
+}
+
+processResources {
+    // this will ensure that this task is redone when the versions change.
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
+
+    // replace stuff in mcmod.info, nothing else
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+
+        // replace version and mcversion
+        expand 'version': project.version, 'mcversion': project.minecraft.version
+    }
+
+    // copy everything else, thats not the mcmod.info
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+    }
+}
+
+repositories {
+    jcenter()
+
+    maven {
+        url "https://maven.shadowfacts.net/"
+    }
+}
+dependencies {
+//    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    deobfCompile group: "net.shadowfacts", name: "Forgelin", version: forgelin_version
+//    compile group: "net.shadowfacts", name: "Forgelin", version: "1.6.0"
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}

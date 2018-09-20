@@ -1,0 +1,18 @@
+# General JVM stuff
+*.class
+*jar
+
+# IntelliJ Metadata
+.idea
+*.iml
+
+# Gradle
+.gradle
+!gradle/*
+
+# Compiled files
+build
+out
+
+# Minecraft
+run
