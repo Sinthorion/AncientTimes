@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ancienttimes:copper_block"
+    }
+  ],
+  "result": {
+    "item": "ancienttimes:copper",
+    "count": 9
+  }
+}

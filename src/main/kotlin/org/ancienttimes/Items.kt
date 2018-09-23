@@ -6,4 +6,5 @@ import org.ancienttimes.item.SimpleItem
 
 enum class Items(val item: Item) {
     CLOTH(SimpleItem("cloth", creativeTab = CreativeTabs.MATERIALS)),
+    COPPER(SimpleItem("copper", creativeTab = CreativeTabs.MATERIALS)),
 }
