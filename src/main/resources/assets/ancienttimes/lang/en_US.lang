@@ -5,3 +5,4 @@ item.copper.name=Copper
 item.tin.name=Tin
 
 tile.copper_ore.name=Copper Ore
+tile.copper_block.name=Block of Copper
