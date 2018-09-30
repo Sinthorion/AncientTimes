@@ -12,6 +12,7 @@ import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.common.event.FMLInitializationEvent
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 import net.minecraftforge.fml.common.registry.GameRegistry
+import net.minecraftforge.oredict.OreDictionary
 
 const val MODID = "ancienttimes"
 
@@ -21,6 +22,8 @@ object AncientTimesMod {
     @Mod.EventHandler
     fun onPostInit(event: FMLInitializationEvent) {
         GameRegistry.addSmelting(Blocks.COPPER_ORE.block, ItemStack(Items.COPPER.item), 0.6f)
+
+        OreDictionary.registerOre("copper", Items.COPPER.item)
     }
 }
 
