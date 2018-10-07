@@ -1,8 +1,20 @@
 item.cloth.name=Cloth
 item.bronze.name=Bronze
-item.brass.name=Brass
+item.bronze_axe.name=Bronze Axe
+item.bronze_hoe.name=Bronze Hoe
+item.bronze_pickaxe.name=Bronze Pickaxe
+item.bronze_shovel.name=Bronze Shovel
 item.copper.name=Copper
+item.copper_nugget.name=Copper Nugget
+item.copper_axe.name=Copper Axe
+item.copper_hoe.name=Copper Hoe
+item.copper_pickaxe.name=Copper Pickaxe
+item.copper_shovel.name=Copper Shovel
 item.tin.name=Tin
+item.tin_nugget.name=Tin Nugget
 
+tile.bronze_block.name=Block of Bronze
 tile.copper_ore.name=Copper Ore
 tile.copper_block.name=Block of Copper
+tile.tin_ore.name=Tin Ore
+tile.tin_block.name=Block of Tin
