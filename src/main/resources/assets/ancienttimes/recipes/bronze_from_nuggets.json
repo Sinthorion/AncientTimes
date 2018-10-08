@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "blocks",
+  "pattern": [
+    "AAA",
+    "AAA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "ancienttimes:bronze_nugget"
+    }
+  },
+  "result": {
+    "item": "ancienttimes:bronze"
+  }
+}

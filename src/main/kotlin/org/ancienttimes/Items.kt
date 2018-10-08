@@ -10,6 +10,7 @@ import org.ancienttimes.item.*
 
 enum class Items(val item: Item) {
     BRONZE(SimpleItem("bronze", creativeTab = CreativeTabs.MATERIALS)),
+    BRONZE_NUGGET(SimpleItem("bronze_nugget", creativeTab = CreativeTabs.MATERIALS)),
     BRONZE_AXE(AxeItem("bronze_axe", material = ToolMaterials.BRONZE.material, creativeTab = CreativeTabs.TOOLS)),
     BRONZE_HOE(HoeItem("bronze_hoe", material = ToolMaterials.BRONZE.material, creativeTab = CreativeTabs.TOOLS)),
     BRONZE_PICKAXE(PickaxeItem("bronze_pickaxe", creativeTab = CreativeTabs.TOOLS,
@@ -18,6 +19,7 @@ enum class Items(val item: Item) {
             material = ToolMaterials.BRONZE.material)),
     CLOTH(SimpleItem("cloth", creativeTab = CreativeTabs.MATERIALS)),
     COPPER(SimpleItem("copper", creativeTab = CreativeTabs.MATERIALS)),
+    COPPER_NUGGET(SimpleItem("copper_nugget", creativeTab = CreativeTabs.MATERIALS)),
     COPPER_AXE(AxeItem("copper_axe", creativeTab = CreativeTabs.TOOLS,
             material = ToolMaterials.COPPER.material)),
     COPPER_HOE(HoeItem("copper_hoe", creativeTab = CreativeTabs.TOOLS,
@@ -26,7 +28,8 @@ enum class Items(val item: Item) {
             material = ToolMaterials.COPPER.material)),
     COPPER_SHOVEL(ShovelItem("copper_shovel", creativeTab = CreativeTabs.TOOLS,
             material = ToolMaterials.COPPER.material)),
-    TIN(SimpleItem("tin", creativeTab = CreativeTabs.MATERIALS))
+    TIN(SimpleItem("tin", creativeTab = CreativeTabs.MATERIALS)),
+    TIN_INGOT(SimpleItem("tin_ingot", creativeTab = CreativeTabs.MATERIALS)),
     ;
 
     fun register(registry: IForgeRegistry<Item>) {

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ancienttimes:bronze"
+    }
+  ],
+  "result": {
+    "item": "ancienttimes:bronze_nugget",
+    "count": 9
+  }
+}
