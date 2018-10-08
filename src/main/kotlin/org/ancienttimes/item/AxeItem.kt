@@ -16,7 +16,7 @@ class AxeItem: ItemTool {
                 maxStackSize: Int = 64,
                 oreDictionaryName: String? = null,
                 material: ToolMaterial
-    ) : super(material, Companion.EFFECTIVE_ON) {
+    ) : super(2.0f, -3.0f, material, Companion.EFFECTIVE_ON) {
         this.unlocalizedName = name
         this.creativeTab = creativeTab
         this.maxStackSize = maxStackSize

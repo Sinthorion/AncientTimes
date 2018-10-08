@@ -17,6 +17,8 @@ enum class Items(val item: Item) {
             material = ToolMaterials.BRONZE.material)),
     BRONZE_SHOVEL(ShovelItem("bronze_shovel", creativeTab = CreativeTabs.TOOLS,
             material = ToolMaterials.BRONZE.material)),
+    BRONZE_SWORD(SwordItem("bronze_sword",
+            material = ToolMaterials.BRONZE.material, creativeTab = CreativeTabs.COMBAT)),
     CLOTH(SimpleItem("cloth", creativeTab = CreativeTabs.MATERIALS)),
     COPPER(SimpleItem("copper", creativeTab = CreativeTabs.MATERIALS)),
     COPPER_NUGGET(SimpleItem("copper_nugget", creativeTab = CreativeTabs.MATERIALS)),
