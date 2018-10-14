@@ -22,8 +22,12 @@ object AncientTimesMod {
         GameRegistry.addSmelting(Blocks.TIN_ORE.block, ItemStack(Items.TIN.item), 0.8f)
 
         OreDictionary.registerOre("copper", Items.COPPER.item)
+        OreDictionary.registerOre("tin", Items.TIN.item)
+        OreDictionary.registerOre("bronze", Items.BRONZE.item)
 
         ToolMaterials.Init.registerRepairItems()
+
+        WorldGenFeatures.register()
     }
 }
 
