@@ -2,6 +2,7 @@ package org.ancienttimes
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation
 import net.minecraft.creativetab.CreativeTabs
+import net.minecraft.inventory.EntityEquipmentSlot
 import net.minecraft.item.Item
 import net.minecraft.util.ResourceLocation
 import net.minecraftforge.client.model.ModelLoader
@@ -19,6 +20,14 @@ enum class Items(val item: Item) {
             material = ToolMaterials.BRONZE.material)),
     BRONZE_SWORD(SwordItem("bronze_sword",
             material = ToolMaterials.BRONZE.material, creativeTab = CreativeTabs.COMBAT)),
+    BRONZE_HEAD(ArmorItem("bronze_head", creativeTab = CreativeTabs.COMBAT,
+            material = ArmorMaterials.BRONZE.material, renderIndex = 0, slot = EntityEquipmentSlot.HEAD)),
+    BRONZE_CHEST(ArmorItem("bronze_chest", creativeTab = CreativeTabs.COMBAT,
+            material = ArmorMaterials.BRONZE.material, renderIndex = 0, slot = EntityEquipmentSlot.CHEST)),
+    BRONZE_LEGS(ArmorItem("bronze_legs", creativeTab = CreativeTabs.COMBAT,
+            material = ArmorMaterials.BRONZE.material, renderIndex = 0, slot = EntityEquipmentSlot.LEGS)),
+    BRONZE_FEET(ArmorItem("bronze_feet", creativeTab = CreativeTabs.COMBAT,
+            material = ArmorMaterials.BRONZE.material, renderIndex = 0, slot = EntityEquipmentSlot.FEET)),
     CLOTH(SimpleItem("cloth", creativeTab = CreativeTabs.MATERIALS)),
     COPPER(SimpleItem("copper", creativeTab = CreativeTabs.MATERIALS)),
     COPPER_NUGGET(SimpleItem("copper_nugget", creativeTab = CreativeTabs.MATERIALS)),
@@ -31,7 +40,7 @@ enum class Items(val item: Item) {
     COPPER_SHOVEL(ShovelItem("copper_shovel", creativeTab = CreativeTabs.TOOLS,
             material = ToolMaterials.COPPER.material)),
     TIN(SimpleItem("tin", creativeTab = CreativeTabs.MATERIALS)),
-    TIN_INGOT(SimpleItem("tin_ingot", creativeTab = CreativeTabs.MATERIALS)),
+    TIN_NUGGET(SimpleItem("tin_nugget", creativeTab = CreativeTabs.MATERIALS)),
     ;
 
     fun register(registry: IForgeRegistry<Item>) {

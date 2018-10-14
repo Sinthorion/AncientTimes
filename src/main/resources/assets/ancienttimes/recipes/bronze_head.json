@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "blocks",
+  "pattern": [
+    "AAA",
+    "A A"
+  ],
+  "key": {
+    "A": {
+      "_comment": "TODO: replace with oreRegistry",
+      "item": "ancienttimes:bronze"
+    }
+  },
+  "result": {
+    "item": "ancienttimes:bronze_head"
+  }
+}
