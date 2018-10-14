@@ -20,8 +20,8 @@ enum class ToolMaterials {
 
     companion object Init {
         public fun registerRepairItems() {
-            COPPER.material.setRepairItem(ItemStack(Items.COPPER.item))
-            BRONZE.material.setRepairItem(ItemStack(Items.BRONZE.item))
+            COPPER.material.setRepairItem(ItemStack(Ancient.COPPER.item))
+            BRONZE.material.setRepairItem(ItemStack(Ancient.BRONZE.item))
         }
     }
 

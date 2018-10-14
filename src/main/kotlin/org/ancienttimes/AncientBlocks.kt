@@ -12,7 +12,7 @@ import net.minecraftforge.client.model.ModelLoader
 import net.minecraftforge.registries.IForgeRegistry
 import org.ancienttimes.block.SimpleBlock
 
-enum class Blocks(val block: Block) {
+enum class AncientBlocks(val block: Block) {
     BRONZE_BLOCK(SimpleBlock("bronze_block",
             creativeTab = CreativeTabs.BUILDING_BLOCKS,
             hardness = 4f, resistance = 9f,

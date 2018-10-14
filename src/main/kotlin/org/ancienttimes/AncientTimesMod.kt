@@ -18,12 +18,12 @@ object AncientTimesMod {
 
     @Mod.EventHandler
     fun onPostInit(event: FMLInitializationEvent) {
-        GameRegistry.addSmelting(Blocks.COPPER_ORE.block, ItemStack(Items.COPPER.item), 0.6f)
-        GameRegistry.addSmelting(Blocks.TIN_ORE.block, ItemStack(Items.TIN.item), 0.8f)
+        GameRegistry.addSmelting(AncientBlocks.COPPER_ORE.block, ItemStack(Ancient.COPPER.item), 0.6f)
+        GameRegistry.addSmelting(AncientBlocks.TIN_ORE.block, ItemStack(Ancient.TIN.item), 0.8f)
 
-        OreDictionary.registerOre("copper", Items.COPPER.item)
-        OreDictionary.registerOre("tin", Items.TIN.item)
-        OreDictionary.registerOre("bronze", Items.BRONZE.item)
+        OreDictionary.registerOre("copper", Ancient.COPPER.item)
+        OreDictionary.registerOre("tin", Ancient.TIN.item)
+        OreDictionary.registerOre("bronze", Ancient.BRONZE.item)
 
         ToolMaterials.Init.registerRepairItems()
 
@@ -38,7 +38,7 @@ object AncientTimesModEventHandler {
     @SubscribeEvent
     fun onBlockRegister(event: RegistryEvent.Register<Block>) {
 
-        Blocks.values().forEach {it.register(event.registry) }
+        AncientBlocks.values().forEach {it.register(event.registry) }
     }
 
     @JvmStatic
@@ -46,8 +46,8 @@ object AncientTimesModEventHandler {
     fun onItemRegister(event: RegistryEvent.Register<Item>) {
 
         println("init items")
-        Items.values().forEach { it.register(event.registry) }
+        Ancient.values().forEach { it.register(event.registry) }
 
-        Blocks.values().forEach { it.registerItem(event.registry)}
+        AncientBlocks.values().forEach { it.registerItem(event.registry)}
     }
 }

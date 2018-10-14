@@ -8,7 +8,7 @@ import net.minecraft.world.chunk.IChunkProvider
 import net.minecraft.world.gen.IChunkGenerator
 import net.minecraft.world.gen.feature.WorldGenMinable
 import net.minecraftforge.fml.common.IWorldGenerator
-import org.ancienttimes.Blocks
+import org.ancienttimes.AncientBlocks
 import java.util.*
 
 object Ore: IWorldGenerator {
@@ -24,8 +24,8 @@ object Ore: IWorldGenerator {
         Ore.chunkZ = chunkZ
         Ore.world = world
 
-        generateOre(Blocks.TIN_ORE.block.defaultState, occurence = 2f, maxHeight = 96)
-        generateOre(Blocks.COPPER_ORE.block.defaultState, occurence = 20f, maxHeight = 96)
+        generateOre(AncientBlocks.TIN_ORE.block.defaultState, occurence = 2f, maxHeight = 96)
+        generateOre(AncientBlocks.COPPER_ORE.block.defaultState, occurence = 20f, maxHeight = 96)
     }
 
     private fun generateOre(

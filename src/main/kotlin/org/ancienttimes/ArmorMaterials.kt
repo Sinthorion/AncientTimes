@@ -1,7 +1,6 @@
 package org.ancienttimes
 
 import net.minecraft.init.SoundEvents
-import net.minecraft.item.Item
 import net.minecraft.item.ItemArmor
 import net.minecraft.item.ItemStack
 import net.minecraft.util.SoundEvent
@@ -28,7 +27,7 @@ enum class ArmorMaterials {
 
     companion object Init {
         public fun registerRepairItems() {
-            BRONZE.material.setRepairItem(ItemStack(Items.BRONZE.item))
+            BRONZE.material.setRepairItem(ItemStack(Ancient.BRONZE.item))
         }
     }
 
