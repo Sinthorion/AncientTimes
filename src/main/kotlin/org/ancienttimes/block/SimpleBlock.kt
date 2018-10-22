@@ -7,14 +7,14 @@ import net.minecraft.block.material.Material
 import net.minecraft.creativetab.CreativeTabs
 import net.minecraftforge.oredict.OreDictionary
 
-class SimpleBlock : Block {
+open class SimpleBlock : Block {
 
     constructor(name: String,
                 creativeTab: CreativeTabs? = null,
                 material: Material = Material.ROCK,
-                mapColor: MapColor = MapColor.STONE,
+                mapColor: MapColor = material.materialMapColor,
                 hardness: Float = 0.5f,
-                resistance: Float = 0.5f,
+                resistance: Float = hardness * 5f,
                 harvestTool: String = "",
                 harvestLevel: Int = 0,
                 soundType: SoundType = SoundType.STONE,
@@ -25,8 +25,8 @@ class SimpleBlock : Block {
         if (creativeTab != null) {
             this.setCreativeTab(creativeTab)
         }
-        this.blockHardness = hardness
         this.blockResistance = resistance
+        this.blockHardness = hardness
         this.setHarvestLevel(harvestTool, harvestLevel)
         this.soundType = soundType
         if (oreDictionaryName != null) {

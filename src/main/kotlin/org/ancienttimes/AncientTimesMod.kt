@@ -12,18 +12,18 @@ import net.minecraftforge.oredict.OreDictionary
 
 const val MODID = "ancienttimes"
 
-@Mod(modid=MODID, name="Ancient Times", version="0.1.0", acceptedMinecraftVersions = "[1.12]",
+@Mod(modid=MODID, name="AncientItems Times", version="0.1.0", acceptedMinecraftVersions = "[1.12]",
         modLanguageAdapter="net.shadowfacts.forgelin.KotlinAdapter")
 object AncientTimesMod {
 
     @Mod.EventHandler
     fun onPostInit(event: FMLInitializationEvent) {
-        GameRegistry.addSmelting(AncientBlocks.COPPER_ORE.block, ItemStack(Ancient.COPPER.item), 0.6f)
-        GameRegistry.addSmelting(AncientBlocks.TIN_ORE.block, ItemStack(Ancient.TIN.item), 0.8f)
+        GameRegistry.addSmelting(AncientBlocks.COPPER_ORE.block, ItemStack(AncientItems.COPPER.item), 0.6f)
+        GameRegistry.addSmelting(AncientBlocks.TIN_ORE.block, ItemStack(AncientItems.TIN.item), 0.8f)
 
-        OreDictionary.registerOre("copper", Ancient.COPPER.item)
-        OreDictionary.registerOre("tin", Ancient.TIN.item)
-        OreDictionary.registerOre("bronze", Ancient.BRONZE.item)
+        OreDictionary.registerOre("copper", AncientItems.COPPER.item)
+        OreDictionary.registerOre("tin", AncientItems.TIN.item)
+        OreDictionary.registerOre("bronze", AncientItems.BRONZE.item)
 
         ToolMaterials.Init.registerRepairItems()
 
@@ -46,7 +46,7 @@ object AncientTimesModEventHandler {
     fun onItemRegister(event: RegistryEvent.Register<Item>) {
 
         println("init items")
-        Ancient.values().forEach { it.register(event.registry) }
+        AncientItems.values().forEach { it.register(event.registry) }
 
         AncientBlocks.values().forEach { it.registerItem(event.registry)}
     }

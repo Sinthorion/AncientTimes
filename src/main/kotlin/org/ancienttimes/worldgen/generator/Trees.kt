@@ -7,11 +7,13 @@ import net.minecraft.world.biome.Biome
 import net.minecraft.world.chunk.IChunkProvider
 import net.minecraft.world.gen.IChunkGenerator
 import net.minecraft.world.gen.feature.WorldGenMinable
+import net.minecraft.world.gen.feature.WorldGenerator
 import net.minecraftforge.fml.common.IWorldGenerator
 import org.ancienttimes.AncientBlocks
+import org.ancienttimes.worldgen.feature.FigTree
 import java.util.*
 
-object Ore: IWorldGenerator {
+object Trees: IWorldGenerator {
 
     private var random: Random? = null
     private var world: World? = null
@@ -19,35 +21,37 @@ object Ore: IWorldGenerator {
     private var chunkZ: Int = 0
 
     override fun generate(random: Random, chunkX: Int, chunkZ: Int, world: World, chunkGenerator: IChunkGenerator, chunkProvider: IChunkProvider?) {
-        Ore.random = random
-        Ore.chunkX = chunkX
-        Ore.chunkZ = chunkZ
-        Ore.world = world
+        this.random = random
+        this.chunkX = chunkX
+        this.chunkZ = chunkZ
+        this.world = world
 
-        generateOre(AncientBlocks.TIN_ORE.block.defaultState, occurence = 2f, maxHeight = 96)
-        generateOre(AncientBlocks.COPPER_ORE.block.defaultState, occurence = 20f, maxHeight = 96)
+        generateTrees(FigTree(false), occurence = 0.2f)
     }
 
-    private fun generateOre(
-            ore: IBlockState,
-            occurence: Float = 1f, size: Int = 10,
-            minHeight: Int = 1, maxHeight: Int = 128,
-            biome: Biome? = null
+    private fun generateTrees(
+            generator: WorldGenerator,
+            occurence: Float = 15f,
+            minHeight: Int = 64, maxHeight: Int = 128,
+            requiredBiome: Biome? = null
     ) {
         assert(0 < minHeight && minHeight < maxHeight && maxHeight < 256)
         val random = random!!
         val world = world!!
-
-        val generator = WorldGenMinable(ore, size)
         val heightdiff = maxHeight - minHeight
 
         var total = 2 * random.nextFloat()
         while (total <= occurence) {
-            val x = random.nextInt(16) + chunkX * 16
-            val y = minHeight + random.nextInt(heightdiff)
-            val z = random.nextInt(16) + chunkZ * 16
+            val x = random.nextInt(16) + chunkX * 16 + 8
+            val z = random.nextInt(16) + chunkZ * 16 + 8
+            val y = world.getHeight(x, z)
+            val pos = BlockPos(x, y, z)
 
-            generator.generate(world, random, BlockPos(x, y, z))
+            val biome = world.getBiome(pos)
+            if (requiredBiome == null || biome == requiredBiome) {
+                generator.generate(world, random, pos)
+            }
+
             total += 2 * random.nextFloat()
         }
     }

@@ -9,7 +9,7 @@ import net.minecraftforge.client.model.ModelLoader
 import net.minecraftforge.registries.IForgeRegistry
 import org.ancienttimes.item.*
 
-enum class Ancient(val item: Item) {
+enum class AncientItems(val item: Item) {
     BRONZE(SimpleItem("bronze", creativeTab = CreativeTabs.MATERIALS)),
     BRONZE_NUGGET(SimpleItem("bronze_nugget", creativeTab = CreativeTabs.MATERIALS)),
     BRONZE_AXE(AxeItem("bronze_axe", material = ToolMaterials.BRONZE.material, creativeTab = CreativeTabs.TOOLS)),

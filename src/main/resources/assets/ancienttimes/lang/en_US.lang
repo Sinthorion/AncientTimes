@@ -23,3 +23,6 @@ tile.copper_ore.name=Copper Ore
 tile.copper_block.name=Block of Copper
 tile.tin_ore.name=Tin Ore
 tile.tin_block.name=Block of Tin
+tile.fig_sapling.name = Fig Sapling
+tile.fig_log.name = Fig log
+tile.fig_leaf.name = Fig Leaves

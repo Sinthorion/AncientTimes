@@ -10,7 +10,8 @@ import net.minecraft.item.ItemBlock
 import net.minecraft.util.ResourceLocation
 import net.minecraftforge.client.model.ModelLoader
 import net.minecraftforge.registries.IForgeRegistry
-import org.ancienttimes.block.SimpleBlock
+import org.ancienttimes.block.*
+import org.ancienttimes.worldgen.feature.FigTree
 
 enum class AncientBlocks(val block: Block) {
     BRONZE_BLOCK(SimpleBlock("bronze_block",
@@ -43,6 +44,9 @@ enum class AncientBlocks(val block: Block) {
             harvestTool = "pickaxe", harvestLevel = 1,
             soundType = SoundType.METAL, mapColor = MapColor.IRON
     )),
+    FIG_SAPLING(Sapling("fig_sapling", generator = FigTree(true))),
+    FIG_LOG(Log("fig_log")),
+    FIG_LEAVES(Leaves("fig_leaves", sapling = FIG_SAPLING.block)),
     ;
 
     fun register(registry: IForgeRegistry<Block>) {

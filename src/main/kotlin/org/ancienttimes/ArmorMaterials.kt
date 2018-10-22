@@ -27,7 +27,7 @@ enum class ArmorMaterials {
 
     companion object Init {
         public fun registerRepairItems() {
-            BRONZE.material.setRepairItem(ItemStack(Ancient.BRONZE.item))
+            BRONZE.material.setRepairItem(ItemStack(AncientItems.BRONZE.item))
         }
     }
 

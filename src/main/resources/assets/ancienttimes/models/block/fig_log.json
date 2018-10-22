@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "ancienttimes:blocks/fig_log_end",
+    "side": "ancienttimes:blocks/fig_log_side"
+  }
+}
