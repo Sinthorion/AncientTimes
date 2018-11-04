@@ -1,0 +1,21 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "side": "ancienttimes:blocks/fig_planks",
+      "bottom": "ancienttimes:blocks/fig_planks",
+      "top": "ancienttimes:blocks/fig_planks"
+    }
+  },
+  "variants": {
+    "half": {
+      "bottom": { "model": "ancienttimes:slab_bottom" },
+      "top": { "model": "ancienttimes:slab_top" },
+      "north": { "model": "ancienttimes:slab_north" },
+      "south": { "model": "ancienttimes:slab_south" },
+      "west": { "model": "ancienttimes:slab_west" },
+      "east": { "model": "ancienttimes:slab_east" },
+      "full": { "model": "ancienttimes:fig_planks" }
+    }
+  }
+}

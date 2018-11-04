@@ -38,6 +38,8 @@ class Log: SimpleBlock {
             creativeTab = CreativeTabs.BUILDING_BLOCKS,
             material = Material.WOOD,
             hardness = 2.0f,
+            harvestTool = "axe",
+            harvestLevel = 0,
             soundType = SoundType.PLANT,
             oreDictionaryName = oreDictionaryName
     ) {

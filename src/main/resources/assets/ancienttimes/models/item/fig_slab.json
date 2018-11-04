@@ -1,0 +1,8 @@
+{
+  "parent": "ancienttimes:block/slab_bottom",
+  "textures": {
+    "side": "ancienttimes:blocks/fig_planks",
+    "bottom": "ancienttimes:blocks/fig_planks",
+    "top": "ancienttimes:blocks/fig_planks"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ancienttimes:fig_log"
+    }
+  ],
+  "result": {
+    "item": "ancienttimes:fig_planks",
+    "count": 4
+  }
+}

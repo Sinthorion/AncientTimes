@@ -32,7 +32,7 @@ class Sapling: SimpleBlock, IPlantable, IGrowable {
 
     protected val SAPLING_AABB = AxisAlignedBB(0.09999999403953552, 0.0, 0.09999999403953552, 0.8999999761581421, 0.800000011920929, 0.8999999761581421)
 
-    private lateinit var generator: WorldGenerator
+    private var generator: WorldGenerator
 
     constructor(name: String,
                 generator: WorldGenerator
@@ -116,8 +116,8 @@ class Sapling: SimpleBlock, IPlantable, IGrowable {
         return if (state.block == this) state else defaultState
     }
 
-    override fun getItem(worldIn: World?, pos: BlockPos?, state: IBlockState?): ItemStack {
-        return super.getItem(worldIn, pos, state)
+    override fun getItem(world: World, pos: BlockPos, state: IBlockState): ItemStack {
+        return super.getItem(world, pos, state)
     }
 
     /**

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "blocks",
+  "pattern": [
+    "A",
+    "A"
+  ],
+  "key": {
+    "A": {
+      "item": "ancienttimes:fig_slab"
+    }
+  },
+  "result": {
+    "item": "ancienttimes:fig_planks"
+  }
+}
