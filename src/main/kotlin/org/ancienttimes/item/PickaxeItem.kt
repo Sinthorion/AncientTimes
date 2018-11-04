@@ -6,7 +6,7 @@ import net.minecraftforge.oredict.OreDictionary
 
 class PickaxeItem: ItemPickaxe {
     constructor(name: String,
-                creativeTab: CreativeTabs? = null,
+                creativeTab: CreativeTabs? = CreativeTabs.TOOLS,
                 maxStackSize: Int = 64,
                 oreDictionaryName: String? = null,
                 material: ToolMaterial

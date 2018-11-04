@@ -9,13 +9,13 @@ import net.minecraftforge.oredict.OreDictionary
 
 class ArmorItem : ItemArmor {
     constructor(
-            name: String,
-            material: ArmorMaterial,
-            renderIndex: Int,
-            slot: EntityEquipmentSlot,
-            creativeTab: CreativeTabs? = null,
-            maxStackSize: Int = 64,
-            oreDictionaryName: String? = null
+        name: String,
+        material: ArmorMaterial,
+        renderIndex: Int = 0,
+        slot: EntityEquipmentSlot,
+        creativeTab: CreativeTabs? = CreativeTabs.COMBAT,
+        maxStackSize: Int = 64,
+        oreDictionaryName: String? = null
     ) : super(material, renderIndex, slot) {
         this.unlocalizedName = name
         this.creativeTab = creativeTab

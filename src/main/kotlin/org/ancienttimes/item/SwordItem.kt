@@ -6,7 +6,7 @@ import net.minecraftforge.oredict.OreDictionary
 
 class SwordItem: ItemSword {
     constructor(name: String,
-                creativeTab: CreativeTabs? = null,
+                creativeTab: CreativeTabs? = CreativeTabs.COMBAT,
                 maxStackSize: Int = 64,
                 oreDictionaryName: String? = null,
                 material: ToolMaterial

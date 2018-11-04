@@ -32,16 +32,14 @@ class Log: SimpleBlock {
         val FACING = BlockLog.LOG_AXIS
     }
 
-    constructor(name: String,
-                oreDictionaryName: String? = null
-    ): super(name,
+    constructor(name: String): super(name,
             creativeTab = CreativeTabs.BUILDING_BLOCKS,
             material = Material.WOOD,
             hardness = 2.0f,
             harvestTool = "axe",
             harvestLevel = 0,
             soundType = SoundType.PLANT,
-            oreDictionaryName = oreDictionaryName
+            oreDictionaryName = "logWood"
     ) {
         defaultState = this.blockState.baseState.withProperty(StateProperties.FACING, BlockLog.EnumAxis.Y)
     }

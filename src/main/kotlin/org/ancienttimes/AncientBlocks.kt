@@ -14,41 +14,11 @@ import org.ancienttimes.block.*
 import org.ancienttimes.worldgen.feature.FigTree
 
 enum class AncientBlocks(val block: SimpleBlock) {
-    BRONZE_BLOCK(SimpleBlock("bronze_block",
-            creativeTab = CreativeTabs.BUILDING_BLOCKS,
-            hardness = 5f, resistance = 10f,
-            harvestTool = "pickaxe", harvestLevel = 1,
-            soundType = SoundType.METAL, mapColor = MapColor.IRON,
-            material = Material.IRON
-    )),
-    COPPER_ORE(SimpleBlock("copper_ore",
-            creativeTab = CreativeTabs.BUILDING_BLOCKS,
-            hardness = 3f, resistance = 5f,
-            harvestTool = "pickaxe", harvestLevel = 1,
-            soundType = SoundType.STONE, mapColor = MapColor.STONE,
-            material = Material.ROCK
-    )),
-    COPPER_BLOCK(SimpleBlock("copper_block",
-            creativeTab = CreativeTabs.BUILDING_BLOCKS,
-            hardness = 4f, resistance = 9f,
-            harvestTool = "pickaxe", harvestLevel = 1,
-            soundType = SoundType.METAL, mapColor = MapColor.IRON,
-            material = Material.IRON
-    )),
-    TIN_ORE(SimpleBlock("tin_ore",
-            creativeTab = CreativeTabs.BUILDING_BLOCKS,
-            hardness = 3f, resistance = 5f,
-            harvestTool = "pickaxe", harvestLevel = 1,
-            soundType = SoundType.STONE, mapColor = MapColor.STONE,
-            material = Material.ROCK
-    )),
-    TIN_BLOCK(SimpleBlock("tin_block",
-            creativeTab = CreativeTabs.BUILDING_BLOCKS,
-            hardness = 3f, resistance = 10f,
-            harvestTool = "pickaxe", harvestLevel = 1,
-            soundType = SoundType.METAL, mapColor = MapColor.IRON,
-            material = Material.IRON
-    )),
+    BRONZE_BLOCK(MetalStorage("bronze_block", hardness = 5f, resistance = 10f)),
+    COPPER_ORE(Ore("copper_ore", harvestLevel = 1)),
+    COPPER_BLOCK(MetalStorage("copper_block", hardness = 4f, resistance = 9f)),
+    TIN_ORE(Ore("tin_ore", harvestLevel = 1)),
+    TIN_BLOCK(MetalStorage("tin_block", hardness = 3f, resistance = 10f)),
     FIG_SAPLING(Sapling("fig_sapling", generator = FigTree(true))),
     FIG_LOG(Log("fig_log")),
     FIG_LEAVES(Leaves("fig_leaves", sapling = FIG_SAPLING.block)),

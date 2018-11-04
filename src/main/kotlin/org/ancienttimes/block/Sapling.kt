@@ -37,9 +37,9 @@ class Sapling: SimpleBlock, IPlantable, IGrowable {
     constructor(name: String,
                 generator: WorldGenerator
     ): super(name,
-            creativeTab = CreativeTabs.DECORATIONS,
-            material = Material.PLANTS,
-            mapColor = Material.PLANTS.materialMapColor
+        creativeTab = CreativeTabs.DECORATIONS,
+        material = Material.PLANTS,
+        mapColor = Material.PLANTS.materialMapColor
     ) {
         this.setTickRandomly(true)
         this.generator = generator

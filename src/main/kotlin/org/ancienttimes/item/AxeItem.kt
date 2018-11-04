@@ -12,7 +12,7 @@ import net.minecraftforge.oredict.OreDictionary
 class AxeItem: ItemTool {
 
     constructor(name: String,
-                creativeTab: CreativeTabs? = null,
+                creativeTab: CreativeTabs? = CreativeTabs.TOOLS,
                 maxStackSize: Int = 64,
                 oreDictionaryName: String? = null,
                 material: ToolMaterial
