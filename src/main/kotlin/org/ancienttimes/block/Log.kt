@@ -38,7 +38,7 @@ class Log: SimpleBlock {
             hardness = 2.0f,
             harvestTool = "axe",
             harvestLevel = 0,
-            soundType = SoundType.PLANT,
+            soundType = SoundType.WOOD,
             oreDictionaryName = "logWood"
     ) {
         defaultState = this.blockState.baseState.withProperty(StateProperties.FACING, BlockLog.EnumAxis.Y)
