@@ -8,7 +8,7 @@
 
 # Gradle
 .gradle
-!gradle/*
+!gradle/wrapper/*
 
 # Compiled files
 build
