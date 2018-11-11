@@ -6,13 +6,12 @@ import net.minecraft.block.material.MapColor
 import net.minecraft.block.material.Material
 import net.minecraft.creativetab.CreativeTabs
 import net.minecraft.item.ItemBlock
-import net.minecraftforge.oredict.OreDictionary
 import kotlin.reflect.KClass
-import kotlin.reflect.full.primaryConstructor
 
 open class SimpleBlock : Block {
 
-    var itemBlockClass: KClass<out ItemBlock>
+    val itemBlockClass: KClass<out ItemBlock>
+    val oreDictionaryName: String?
 
     constructor(name: String,
                 creativeTab: CreativeTabs? = null,
@@ -36,8 +35,6 @@ open class SimpleBlock : Block {
         this.setHarvestLevel(harvestTool, harvestLevel)
         this.soundType = soundType
         this.itemBlockClass = itemBlockClass
-        if (oreDictionaryName != null) {
-            OreDictionary.registerOre(oreDictionaryName, this)
-        }
+        this.oreDictionaryName = oreDictionaryName
     }
 }

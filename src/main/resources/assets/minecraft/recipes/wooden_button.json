@@ -1,18 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "blocks",
   "pattern": [
-    "AAA",
-    "AAA",
-    "AAA"
+    "A"
   ],
   "key": {
     "A": {
       "type": "forge:ore_dict",
-      "ore": "nuggetTin"
+      "ore": "plankWood"
     }
   },
   "result": {
-    "item": "ancienttimes:tin"
+    "item": "minecraft:wooden_button"
   }
 }

@@ -9,6 +9,7 @@ import net.minecraft.creativetab.CreativeTabs
 import net.minecraft.item.Item
 import net.minecraft.util.ResourceLocation
 import net.minecraftforge.client.model.ModelLoader
+import net.minecraftforge.oredict.OreDictionary
 import net.minecraftforge.registries.IForgeRegistry
 import org.ancienttimes.block.*
 import org.ancienttimes.worldgen.feature.FigTree
@@ -40,5 +41,10 @@ enum class AncientBlocks(val block: SimpleBlock) {
         item.registryName = ResourceLocation("$MODID:$name")
         registry.register(item)
         ModelLoader.setCustomModelResourceLocation(item, 0, ModelResourceLocation("$MODID:$name"))
+
+
+        if (block.oreDictionaryName != null) {
+            OreDictionary.registerOre(block.oreDictionaryName, item)
+        }
     }
 }

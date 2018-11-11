@@ -2,7 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "ancienttimes:bronze"
+      "type": "forge:ore_dict",
+      "ore": "ingotBronze"
     }
   ],
   "result": {

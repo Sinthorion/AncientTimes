@@ -2,17 +2,17 @@
   "type": "minecraft:crafting_shaped",
   "group": "blocks",
   "pattern": [
-    "AAA",
-    "AAA",
-    "AAA"
+    "A",
+    "A"
   ],
   "key": {
     "A": {
       "type": "forge:ore_dict",
-      "ore": "nuggetTin"
+      "ore": "plankWood"
     }
   },
   "result": {
-    "item": "ancienttimes:tin"
+    "item": "minecraft:stick",
+    "count": 4
   }
 }

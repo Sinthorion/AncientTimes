@@ -1,18 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "blocks",
+  "group": "boat",
   "pattern": [
     "A A",
-    "AAA",
     "AAA"
   ],
   "key": {
     "A": {
-      "type": "forge:ore_dict",
-      "ore": "ingotBronze"
+      "item": "ancienttimes:fig_planks"
     }
   },
   "result": {
-    "item": "ancienttimes:bronze_chest"
+    "item": "minecraft:boat"
   }
 }

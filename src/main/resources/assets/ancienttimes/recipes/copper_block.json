@@ -8,8 +8,8 @@
   ],
   "key": {
     "A": {
-      "_comment": "TODO: replace with oreRegistry",
-      "item": "ancienttimes:copper"
+      "type": "forge:ore_dict",
+      "ore": "ingotCopper"
     }
   },
   "result": {

@@ -7,8 +7,8 @@
   ],
   "key": {
     "A": {
-      "_comment": "TODO: replace with oreRegistry",
-      "item": "ancienttimes:bronze"
+      "type": "forge:ore_dict",
+      "ore": "ingotBronze"
     }
   },
   "result": {
